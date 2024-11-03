@@ -1,0 +1,91 @@
+version: "3.8"
+services:
+  gateway-tma:
+    container_name: gateway-tma
+    build:
+      context: ./gateway-tma/
+      target: base
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - MONGO_URL=mongodb://mongo-tma:27018/
+      - PORT=4050
+      - TOKEN=TOKEN
+      - DEV=1
+      - USERS_API=http://user-service-tma:4051
+      - TRANSACTIONS_API=http://user-details-service-tma:4052
+      - AUTH_API=http://task-service-tma:4053
+    command:
+      - npm run server
+    volumes:
+      - ./gateway-tma:/workspace/gateway-tma/
+    ports:
+      - "4050:4050"
+    entrypoint:
+      ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
+
+  user-service-tma:
+    container_name: user-service-tma
+    build:
+      context: ./user-service-tma/
+      target: base
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - MONGO_URL=mongodb://mongo-tma:27018/
+      - PORT=4051
+      - TOKEN=TOKEN
+      - DEV=1
+      - COLLECTION_NAME=user
+    command: npm run server
+    volumes:
+      - ./user-service-tma:/workspace/user-service-tma/
+    ports:
+      - "4051:4051"
+    entrypoint:
+      ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
+
+  user-details-service-tma:
+    container_name: user-details-service-tma
+    build:
+      context: ./user-details-service-tma/
+      target: base
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - MONGO_URL=mongodb://mongo-tma:27018/
+      - PORT=4052
+      - TOKEN=TOKEN
+      - DEV=1
+      - COLLECTION_NAME=details
+    command: npm run server
+    volumes:
+      - ./user-details-service-tma:/workspace/user-details-service-tma/
+    ports:
+      - "4052:4052"
+    entrypoint:
+      ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
+
+  task-service-tma:
+    container_name: task-service-tma
+    build:
+      context: ./task-service-tma/
+      target: base
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - MONGO_URL=mongodb://mongo-tma:27018/
+      - PORT=4053
+      - TOKEN=TOKEN
+      - DEV=1
+      - COLLECTION_NAME=tasks
+    command: npm run server
+    volumes:
+      - ./task-service-tma:/workspace/task-service-tma/
+    ports:
+      - "4053:4053"
+    entrypoint:
+      ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
+
+  mongo-tma:
+    image: mongo
+    container_name: database-mongo-tma
+    restart: unless-stopped
+    ports:
+      - "27018:27017"

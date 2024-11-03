@@ -1,0 +1,396 @@
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+#0 building with "default" instance using docker driver
+
+#1 [gateway internal] load build definition from Dockerfile
+#1 transferring dockerfile: 530B done
+#1 DONE 0.0s
+
+#2 [gateway internal] load .dockerignore
+#2 transferring context: 142B done
+#2 DONE 0.0s
+
+#3 [task-service internal] load build definition from Dockerfile
+#3 transferring dockerfile: 585B done
+#3 DONE 0.0s
+
+#4 [task-service internal] load .dockerignore
+#4 transferring context: 142B done
+#4 DONE 0.0s
+
+#5 [user-service internal] load .dockerignore
+#5 transferring context: 142B done
+#5 DONE 0.0s
+
+#6 [user-service internal] load build definition from Dockerfile
+#6 transferring dockerfile: 585B done
+#6 DONE 0.0s
+
+#7 [user-details-service internal] load build definition from Dockerfile
+#7 transferring dockerfile: 673B done
+#7 DONE 0.0s
+
+#8 [user-details-service internal] load .dockerignore
+#8 transferring context: 142B done
+#8 DONE 0.0s
+
+#9 [user-details-service internal] load metadata for docker.io/library/node:18
+#9 DONE 1.7s
+
+#10 [user-service base 1/4] FROM docker.io/library/node:18@sha256:ddd173cd94537e155b378342056e0968e8299eb3da9dd5d412d3b7f796ac38c0
+#10 resolve docker.io/library/node:18@sha256:ddd173cd94537e155b378342056e0968e8299eb3da9dd5d412d3b7f796ac38c0 0.0s done
+#10 sha256:915f67036af49bad671aa4cbb853988d97fb89b24e170dc131cc8f0b5726780f 2.49kB / 2.49kB done
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 0B / 24.05MB 0.1s
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 0B / 64.39MB 0.1s
+#10 sha256:915f67036af49bad671aa4cbb853988d97fb89b24e170dc131cc8f0b5726780f 2.49kB / 2.49kB done
+#10 sha256:ddd173cd94537e155b378342056e0968e8299eb3da9dd5d412d3b7f796ac38c0 6.41kB / 6.41kB done
+#10 sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b 1.05MB / 49.56MB 0.2s
+#10 sha256:416ebe3d6a254ab6cebfa09550ffafd16a52ce55dc03c2315461c486025c3cc0 6.70kB / 6.70kB done
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 7.34MB / 64.39MB 0.5s
+#10 sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b 23.07MB / 49.56MB 0.5s
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 24.12MB / 64.39MB 0.8s
+#10 sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b 38.80MB / 49.56MB 0.8s
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 34.60MB / 64.39MB 1.0s
+#10 sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b 49.56MB / 49.56MB 1.0s
+#10 extracting sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 38.10MB / 64.39MB 1.1s
+#10 sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b 49.56MB / 49.56MB 1.0s done
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 0B / 211.27MB 1.1s
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 3.15MB / 24.05MB 1.2s
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 44.04MB / 64.39MB 1.2s
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 5.24MB / 24.05MB 1.3s
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 7.34MB / 24.05MB 1.4s
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 52.43MB / 64.39MB 1.4s
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 12.58MB / 24.05MB 1.6s
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 61.87MB / 64.39MB 1.6s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 18.87MB / 211.27MB 1.6s
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 16.78MB / 24.05MB 1.7s
+#10 sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 64.39MB / 64.39MB 1.7s done
+#10 sha256:59ee42d02ee5edca29b89e9d18b5bedd9400da38e1dcc0da4f22eaf19d24983b 0B / 3.32kB 1.7s
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 20.97MB / 24.05MB 1.8s
+#10 sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 24.05MB / 24.05MB 1.9s done
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 32.51MB / 211.27MB 1.9s
+#10 sha256:59ee42d02ee5edca29b89e9d18b5bedd9400da38e1dcc0da4f22eaf19d24983b 3.32kB / 3.32kB 1.9s done
+#10 sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 0B / 45.64MB 1.9s
+#10 sha256:f110c757afc5699d6587a989cc741d88e170d259506ecd3b6d9d0169c2dd1a47 0B / 1.25MB 1.9s
+#10 sha256:f110c757afc5699d6587a989cc741d88e170d259506ecd3b6d9d0169c2dd1a47 1.25MB / 1.25MB 2.1s done
+#10 sha256:e3d8693bad2fd07287529dd2f1bc71d431ed97f061cc8440707f144165fa8afc 0B / 444B 2.1s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 45.07MB / 211.27MB 2.3s
+#10 sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 12.58MB / 45.64MB 2.3s
+#10 sha256:e3d8693bad2fd07287529dd2f1bc71d431ed97f061cc8440707f144165fa8afc 444B / 444B 2.2s done
+#10 sha256:e3d8693bad2fd07287529dd2f1bc71d431ed97f061cc8440707f144165fa8afc 444B / 444B 2.2s done
+#10 sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 20.97MB / 45.64MB 2.6s
+#10 extracting sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b 1.7s done
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 57.67MB / 211.27MB 2.7s
+#10 sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 27.26MB / 45.64MB 2.7s
+#10 extracting sha256:7d98d813d54f6207a57721008a4081378343ad8f1b2db66c121406019171805b 1.7s done
+#10 sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 39.96MB / 45.64MB 2.9s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 71.30MB / 211.27MB 3.0s
+#10 sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 45.64MB / 45.64MB 3.0s done
+#10 extracting sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 0.1s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 84.93MB / 211.27MB 3.3s
+#10 extracting sha256:da802df85c965baeca9d39869f9e2cbb3dc844d4627f413bfbb2f2c3d6055988 0.5s done
+#10 extracting sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 99.61MB / 211.27MB 3.6s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 114.29MB / 211.27MB 4.0s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 134.22MB / 211.27MB 4.3s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 149.95MB / 211.27MB 4.6s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 162.53MB / 211.27MB 4.8s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 175.11MB / 211.27MB 5.1s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 193.99MB / 211.27MB 5.4s
+#10 extracting sha256:7aadc5092c3b7a865666b14bef3d4d038282b19b124542f1a158c98ea8c1ed1b 2.0s done
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 211.27MB / 211.27MB 5.9s
+#10 sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 211.27MB / 211.27MB 6.0s done
+#10 extracting sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343
+#10 extracting sha256:ad1c7cfc347f5c86fc2678b58f6a8fb6c6003471405760532fc3240b9eb1b343 5.0s done
+#10 extracting sha256:59ee42d02ee5edca29b89e9d18b5bedd9400da38e1dcc0da4f22eaf19d24983b
+#10 extracting sha256:59ee42d02ee5edca29b89e9d18b5bedd9400da38e1dcc0da4f22eaf19d24983b done
+#10 extracting sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 0.1s
+#10 extracting sha256:eb173c1dbe92b367644a53adf5c004908921fa91460c054f2746046e481603fb 1.6s done
+#10 extracting sha256:f110c757afc5699d6587a989cc741d88e170d259506ecd3b6d9d0169c2dd1a47
+#10 extracting sha256:f110c757afc5699d6587a989cc741d88e170d259506ecd3b6d9d0169c2dd1a47 0.0s done
+#10 extracting sha256:e3d8693bad2fd07287529dd2f1bc71d431ed97f061cc8440707f144165fa8afc done
+#10 DONE 13.2s
+
+#11 [user-details-service base 2/4] RUN mkdir -p /workspace/
+#11 DONE 0.8s
+
+#12 [user-details-service base 3/4] RUN mkdir -p /workspace/user-details-service
+#12 ...
+
+#13 [task-service base 3/4] RUN mkdir -p /workspace/task-service
+#13 DONE 0.4s
+
+#12 [user-details-service base 3/4] RUN mkdir -p /workspace/user-details-service
+#12 DONE 0.5s
+
+#14 [task-service base 4/4] WORKDIR /workspace/task-service
+#14 DONE 0.0s
+
+#15 [user-details-service base 4/4] WORKDIR /workspace/user-details-service
+#15 DONE 0.0s
+
+#16 [task-service] exporting to image
+#16 exporting layers 0.0s done
+#16 writing image sha256:3ae0c3cc81c26f2896d6466ace56f2de3327992dc1489d307b8249d82ed1e5b5 done
+#16 naming to docker.io/library/taskmanagerapp-task-service done
+#16 DONE 0.0s
+
+#17 [user-details-service] exporting to image
+#17 exporting layers 0.0s done
+#17 writing image sha256:caec0d58fb429cf55d9ab58f414cc9385d6b106a8914a46ef0e0b8c1126ac1d8 done
+#17 naming to docker.io/library/taskmanagerapp-user-details-service done
+#17 DONE 0.0s
+
+#18 [user-service base 3/4] RUN mkdir -p /workspace/user-service
+#18 DONE 0.6s
+
+#19 [user-service base 4/4] WORKDIR /workspace/user-service
+#19 DONE 0.1s
+
+#20 [gateway base 3/4] RUN mkdir -p /workspace/gateway
+#20 DONE 0.6s
+
+#21 [gateway base 4/4] WORKDIR /workspace/gateway
+#21 DONE 0.0s
+
+#22 [user-service] exporting to image
+#22 exporting layers 0.0s done
+#22 writing image sha256:10762092bba3c8e4b0c123790576d6a5e8a6e8f358a0b453e435b3a4d6c6cb8f done
+#22 naming to docker.io/library/taskmanagerapp-user-service done
+#22 DONE 0.0s
+
+#23 [gateway] exporting to image
+#23 exporting layers 0.0s done
+#23 writing image sha256:d4f969f52e612f0e957cc4633c5fd854e8040c2c1f92668e08476c788428ed3d done
+#23 naming to docker.io/library/taskmanagerapp-gateway done
+#23 DONE 0.0s
+ Network taskmanagerapp_default  Creating
+ Network taskmanagerapp_default  Created
+ Container gateway  Creating
+ Container user-details-service  Creating
+ Container user-service  Creating
+ Container task-service  Creating
+ Container database-mongo  Creating
+Error response from daemon: Conflict. The container name "/gateway" is already in use by container "c0631b61a8773260d280fb46755cff41ea3117666e8969d4f35f0f873b8de0b6". You have to remove (or rename) that container to be able to reuse that name.
+Error occurred while running 'docker-compose up'.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+unable to prepare context: path "/home/ubuntu/Desktop/TaskManagerApp/task-service" not found
+Error occurred while running 'docker-compose up'.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+#0 building with "default" instance using docker driver
+
+#1 [gateway-tma internal] load build definition from Dockerfile
+#1 transferring dockerfile: 530B done
+#1 DONE 0.0s
+
+#2 [user-service-tma internal] load build definition from Dockerfile
+#2 transferring dockerfile: 585B done
+#2 DONE 0.0s
+
+#3 [user-details-service-tma internal] load build definition from Dockerfile
+#3 transferring dockerfile: 673B done
+#3 DONE 0.0s
+
+#4 [user-service-tma internal] load .dockerignore
+#4 transferring context: 142B done
+#4 DONE 0.0s
+
+#5 [user-details-service-tma internal] load .dockerignore
+#5 transferring context: 142B done
+#5 DONE 0.0s
+
+#6 [gateway-tma internal] load .dockerignore
+#6 transferring context: 142B done
+#6 DONE 0.0s
+
+#7 [gateway-tma internal] load metadata for docker.io/library/node:18
+#7 ...
+
+#8 [task-service-tma internal] load build definition from Dockerfile
+#8 transferring dockerfile: 585B done
+#8 DONE 0.0s
+
+#9 [task-service-tma internal] load .dockerignore
+#9 transferring context: 142B done
+#9 DONE 0.0s
+
+#7 [task-service-tma internal] load metadata for docker.io/library/node:18
+#7 DONE 0.5s
+
+#10 [task-service-tma base 3/4] RUN mkdir -p /workspace/task-service
+#10 CACHED
+
+#11 [task-service-tma base 4/4] WORKDIR /workspace/task-service
+#11 CACHED
+
+#12 [task-service-tma] exporting to image
+#12 exporting layers done
+#12 writing image sha256:3cd7bf164b07ace195d75adb147fcf1601ec9297deaefa3a7608fccabc7a6813 done
+#12 naming to docker.io/library/taskmanagerapp-task-service-tma done
+#12 DONE 0.0s
+
+#13 [gateway-tma base 3/4] RUN mkdir -p /workspace/gateway
+#13 CACHED
+
+#14 [gateway-tma base 4/4] WORKDIR /workspace/gateway
+#14 CACHED
+
+#15 [gateway-tma] exporting to image
+#15 exporting layers done
+#15 writing image sha256:8c53d755f041bb76bb138c17de21e35ff07a6cf06e2faf0d9e658c11235fb91b done
+#15 naming to docker.io/library/taskmanagerapp-gateway-tma done
+#15 DONE 0.0s
+
+#16 [user-service-tma base 3/4] RUN mkdir -p /workspace/user-service
+#16 CACHED
+
+#17 [user-service-tma base 4/4] WORKDIR /workspace/user-service
+#17 CACHED
+
+#18 [user-service-tma] exporting to image
+#18 exporting layers done
+#18 writing image sha256:630da63f295f5b1264679b20ef1ad0d74b904a783a36163610ee283d4dfe70dc done
+#18 naming to docker.io/library/taskmanagerapp-user-service-tma 0.0s done
+#18 DONE 0.0s
+
+#19 [task-service-tma base 1/4] FROM docker.io/library/node:18@sha256:ddd173cd94537e155b378342056e0968e8299eb3da9dd5d412d3b7f796ac38c0
+#19 DONE 0.0s
+
+#20 [user-details-service-tma base 3/4] RUN mkdir -p /workspace/user-details-service
+#20 CACHED
+
+#21 [gateway-tma base 2/4] RUN mkdir -p /workspace/
+#21 CACHED
+
+#22 [user-details-service-tma base 4/4] WORKDIR /workspace/user-details-service
+#22 CACHED
+
+#23 [user-details-service-tma] exporting to image
+#23 exporting layers done
+#23 writing image sha256:b1b1b7f74bd6d0a372ba529047435353b8656e56f34bd4d4ba73cd0060899a1f done
+#23 naming to docker.io/library/taskmanagerapp-user-details-service-tma done
+#23 DONE 0.0s
+time="2024-11-03T11:53:05+01:00" level=warning msg="Found orphan containers ([user-service user-details-service task-service]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container task-service-tma  Creating
+ Container gateway-tma  Creating
+ Container user-details-service-tma  Creating
+ Container user-service-tma  Creating
+ Container database-mongo-tma  Creating
+ Container user-service-tma  Created
+ Container gateway-tma  Created
+ Container user-details-service-tma  Created
+ Container task-service-tma  Created
+ Container database-mongo-tma  Created
+ Container task-service-tma  Starting
+ Container user-details-service-tma  Starting
+ Container gateway-tma  Starting
+ Container user-service-tma  Starting
+ Container database-mongo-tma  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint database-mongo-tma (a402dae45c1677ecffcf130ed11cd5241f69d5d0bd206f4e3debb310f4223040): Bind for 0.0.0.0:27017 failed: port is already allocated
+Error occurred while running 'docker-compose up'.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+time="2024-11-03T11:53:38+01:00" level=warning msg="Found orphan containers ([user-service user-details-service task-service]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container database-mongo-tma  Recreate
+Error response from daemon: Error when allocating new name: Conflict. The container name "/database-mongo" is already in use by container "b27e91d099fbaffa5bdee191eac3b59dddb987c305c8c07269bd86e27214f09d". You have to remove (or rename) that container to be able to reuse that name.
+Error occurred while running 'docker-compose up'.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+time="2024-11-03T11:55:25+01:00" level=warning msg="Found orphan containers ([user-service user-details-service task-service]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container 49b6918b399d_database-mongo  Recreate
+ Container 49b6918b399d_database-mongo  Recreated
+ Container task-service-tma  Starting
+ Container database-mongo-tma  Starting
+ Container gateway-tma  Starting
+ Container user-service-tma  Starting
+ Container user-details-service-tma  Starting
+ Container database-mongo-tma  Started
+Error response from daemon: driver failed programming external connectivity on endpoint user-details-service-tma (c740e4ae5591c46d2febdcc9202ba23843c3125f9d9faaccf066f17466ae3f1e): Bind for 0.0.0.0:4002 failed: port is already allocated
+Error occurred while running 'docker-compose up'.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+time="2024-11-03T11:56:29+01:00" level=warning msg="Found orphan containers ([user-service user-details-service task-service]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container database-mongo-tma  Running
+ Container gateway-tma  Recreate
+ Container user-details-service-tma  Recreate
+ Container task-service-tma  Recreate
+ Container user-service-tma  Recreate
+ Container user-service-tma  Recreated
+ Container user-details-service-tma  Recreated
+ Container gateway-tma  Recreated
+ Container task-service-tma  Recreated
+ Container user-details-service-tma  Starting
+ Container task-service-tma  Starting
+ Container user-service-tma  Starting
+ Container gateway-tma  Starting
+ Container user-service-tma  Started
+ Container task-service-tma  Started
+ Container user-details-service-tma  Started
+ Container gateway-tma  Started
+Docker containers started successfully.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+time="2024-11-03T12:12:34+01:00" level=warning msg="Found orphan containers ([user-service user-details-service task-service]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container database-mongo-tma  Running
+ Container task-service-tma  Running
+ Container gateway-tma  Running
+ Container user-service-tma  Running
+ Container user-details-service-tma  Running
+Docker containers started successfully.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+time="2024-11-03T12:14:58+01:00" level=warning msg="Found orphan containers ([user-service user-details-service task-service]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container database-mongo-tma  Running
+ Container task-service-tma  Running
+ Container gateway-tma  Running
+ Container user-details-service-tma  Running
+ Container user-service-tma  Running
+Docker containers started successfully.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+ Container gateway-tma  Created
+ Container task-service-tma  Recreate
+ Container database-mongo-tma  Created
+ Container user-details-service-tma  Recreate
+ Container user-service-tma  Recreate
+ Container task-service-tma  Recreated
+ Container user-service-tma  Recreated
+ Container user-details-service-tma  Recreated
+ Container user-service-tma  Starting
+ Container user-details-service-tma  Starting
+ Container database-mongo-tma  Starting
+ Container gateway-tma  Starting
+ Container task-service-tma  Starting
+ Container user-details-service-tma  Started
+ Container user-service-tma  Started
+ Container task-service-tma  Started
+Error response from daemon: network 9a00a6b28d6e87d6d0120716cf84c25c32e9191fdb861930f14b5715745a550e not found
+Error occurred while running 'docker-compose up'.
+Running ./scripts/start_docker.sh...
+Running 'sudo docker-compose up'...
+ Network taskmanagerapp_default  Creating
+ Network taskmanagerapp_default  Created
+ Container database-mongo-tma  Creating
+ Container gateway-tma  Creating
+ Container user-service-tma  Creating
+ Container task-service-tma  Creating
+ Container user-details-service-tma  Creating
+ Container user-service-tma  Created
+ Container gateway-tma  Created
+ Container task-service-tma  Created
+ Container database-mongo-tma  Created
+ Container user-details-service-tma  Created
+ Container gateway-tma  Starting
+ Container user-details-service-tma  Starting
+ Container user-service-tma  Starting
+ Container task-service-tma  Starting
+ Container database-mongo-tma  Starting
+ Container gateway-tma  Started
+ Container task-service-tma  Started
+ Container user-service-tma  Started
+ Container database-mongo-tma  Started
+ Container user-details-service-tma  Started
+Docker containers started successfully.

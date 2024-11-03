@@ -1,0 +1,60 @@
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./user-details-service/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service/bin/dev-entrypoint.sh
+Adding execute permission to ./gateway/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./gateway-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./user-details-service-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service-tma/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./user-details-service/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service/bin/dev-entrypoint.sh
+Adding execute permission to ./gateway/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./user-details-service/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service/bin/dev-entrypoint.sh
+Adding execute permission to ./gateway/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./user-details-service/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service/bin/dev-entrypoint.sh
+Adding execute permission to ./gateway/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./user-details-service/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service/bin/dev-entrypoint.sh
+Adding execute permission to ./gateway/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./user-details-service/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service/bin/dev-entrypoint.sh
+Adding execute permission to ./gateway/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./user-details-service/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service/bin/dev-entrypoint.sh
+Adding execute permission to ./gateway/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./gateway-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./user-details-service-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service-tma/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
+Running ./scripts/add_permissions.sh...
+Adding execute permission to ./gateway-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./user-service-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./user-details-service-tma/bin/dev-entrypoint.sh
+Adding execute permission to ./task-service-tma/bin/dev-entrypoint.sh
+Execute permissions added to all dev-entrypoint.sh files.
