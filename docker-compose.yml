@@ -1,28 +1,5 @@
 version: "3.8"
 services:
-  gateway-tma:
-    container_name: gateway-tma
-    build:
-      context: ./gateway-tma/
-      target: base
-      dockerfile: ./docker/Dockerfile
-    environment:
-      - MONGO_URL=mongodb://database-mongo-tma:27017/
-      - PORT=4050
-      - TOKEN=TOKEN
-      - DEV=1
-      - USERS_API=http://user-service-tma:4051
-      - TRANSACTIONS_API=http://user-details-service-tma:4052
-      - AUTH_API=http://task-service-tma:4053
-    command:
-      - npm run server
-    volumes:
-      - ./gateway-tma:/workspace/gateway-tma/
-    ports:
-      - "4050:4050"
-    entrypoint:
-      ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
-
 
   user-service-tma:
     container_name: user-service-tma
@@ -35,7 +12,7 @@ services:
       - PORT=4051
       - TOKEN=TOKEN
       - DEV=1
-      - COLLECTION_NAME=user
+      - COLLECTION_NAME=users
     command: npm run server
     volumes:
       - ./user-service-tma:/workspace/user-service-tma/
@@ -56,7 +33,7 @@ services:
       - PORT=4052
       - TOKEN=TOKEN
       - DEV=1
-      - COLLECTION_NAME=details
+      - COLLECTION_NAME=users
     command: npm run server
     volumes:
       - ./user-details-service-tma:/workspace/user-details-service-tma/
@@ -98,6 +75,21 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+
+  frontend-tma:
+    container_name: frontend-tma
+    build:
+      context: ./frontend-tma/
+      target: base
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run start
+    volumes:
+      - ./frontend-tma:/workspace/frontend-tma/:rw
+    ports:
+      - "3000:3000"
+    entrypoint: ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
 
 networks:
   my-network:
