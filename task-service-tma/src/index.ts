@@ -2,8 +2,8 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import { logger } from './utils/logs';
 import { MongoClient } from 'mongodb';
-import { UserType } from './models/User';
-import { UserController } from './controllers/Controller';
+import { TaskType } from './models/Task';
+import { TaskController } from './controllers/Controller';
 const app: Application = express();
 app.use(express.json());
 app.use(
@@ -21,9 +21,14 @@ app.use(
       logger('info', `[Task] Working at port ${process.env.PORT}`);
     });
 
-    const collection = database.collection<UserType>(process.env.COLLECTION_NAME!);
-    const usersController = new UserController(collection);
-    app.get('/get-user-id/:userID', async (req, res) => await usersController.getUserId(req, res));
+    const collection = database.collection<TaskType>(process.env.COLLECTION_NAME!);
+    const taskController = new TaskController(collection);
+    app.get('/api/users/:id/tasks', async (req, res) => await taskController.getTasks(req, res));
+    app.post('/api/users/:id/tasks', async (req, res) => await taskController.addTask(req, res));
+    app.patch(
+      '/api/users/:id/tasks/:taskId',
+      async (req, res) => await taskController.updateTaskStatus(req, res)
+    );
   } catch (error) {
     logger('error', error as string);
   }
