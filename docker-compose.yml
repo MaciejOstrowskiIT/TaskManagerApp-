@@ -7,7 +7,7 @@ services:
       target: base
       dockerfile: ./docker/Dockerfile
     environment:
-      - MONGO_URL=mongodb://mongo-tma:27018/
+      - MONGO_URL=mongodb://database-mongo-tma:27017/
       - PORT=4050
       - TOKEN=TOKEN
       - DEV=1
@@ -23,6 +23,7 @@ services:
     entrypoint:
       ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
 
+
   user-service-tma:
     container_name: user-service-tma
     build:
@@ -30,7 +31,7 @@ services:
       target: base
       dockerfile: ./docker/Dockerfile
     environment:
-      - MONGO_URL=mongodb://mongo-tma:27018/
+      - MONGO_URL=mongodb://database-mongo-tma:27017/
       - PORT=4051
       - TOKEN=TOKEN
       - DEV=1
@@ -43,6 +44,7 @@ services:
     entrypoint:
       ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
 
+
   user-details-service-tma:
     container_name: user-details-service-tma
     build:
@@ -50,7 +52,7 @@ services:
       target: base
       dockerfile: ./docker/Dockerfile
     environment:
-      - MONGO_URL=mongodb://mongo-tma:27018/
+      - MONGO_URL=mongodb://database-mongo-tma:27017/
       - PORT=4052
       - TOKEN=TOKEN
       - DEV=1
@@ -63,6 +65,7 @@ services:
     entrypoint:
       ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
 
+
   task-service-tma:
     container_name: task-service-tma
     build:
@@ -70,7 +73,7 @@ services:
       target: base
       dockerfile: ./docker/Dockerfile
     environment:
-      - MONGO_URL=mongodb://mongo-tma:27018/
+      - MONGO_URL=mongodb://database-mongo-tma:27017/
       - PORT=4053
       - TOKEN=TOKEN
       - DEV=1
@@ -83,9 +86,19 @@ services:
     entrypoint:
       ["/bin/sh", "-c", "./bin/dev-entrypoint.sh && tail -f /dev/null"]
 
-  mongo-tma:
+
+  database-mongo-tma:
     image: mongo
     container_name: database-mongo-tma
     restart: unless-stopped
     ports:
-      - "27018:27017"
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+networks:
+  my-network:
+    driver: bridge
