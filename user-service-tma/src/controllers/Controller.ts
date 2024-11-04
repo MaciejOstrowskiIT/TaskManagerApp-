@@ -7,30 +7,33 @@ import { IController } from '../interfaces/IControllerInterface';
 export class UserController implements IController {
   endpoint = process.env.USERS_SERVICE!;
   constructor(private collection: Collection<UserType>) {}
-
-  public async getUserId(req: Request, res: Response): Promise<void> {
-    console.log(req.params.id);
+  public async getUsers(req: Request, res: Response): Promise<void> {
     try {
-      const result = await this.collection.findOne(
-        { _id: req.params.id as unknown as ObjectId },
-        { projection: { profile: 1 } }
-      );
-      res.status(200).json(result);
+      const page = parseInt(req.query.page as string) || 1;
+      const sortBy = req.query.sortBy === 'name' ? 'name' : 'createdDate';
+      const order = req.query.order === 'desc' ? -1 : 1;
+
+      const pageSize = 10;
+      const skip = (page - 1) * pageSize;
+
+      const users = await this.collection
+        .find({})
+        .sort({ [sortBy]: order })
+        .skip(skip)
+        .limit(pageSize)
+        .toArray();
+
+      const formattedUsers = users.map((user) => ({
+        id: user._id.toString(),
+        name: user.name,
+        email: user.email,
+        createdDate: user.createdDate,
+      }));
+
+      res.status(200).json(formattedUsers);
     } catch (error) {
-      res.json({ status: '400', message: error });
+      logger('error', `getUsers error: ${error}`);
+      res.status(400).json({ status: '400', message: error });
     }
   }
-
-  //   public async getUserData(req: Request, res: Response): Promise<void> {
-  //     try {
-  //       const userId = new ObjectId(req.params.id);
-  //       // const userId = req.params.id as unknown as ObjectId
-  //       console.log('userId ', userId);
-  //       const result = await this.accountsCollection.findOne({ userId: userId });
-  //       logger('info', JSON.stringify(result));
-  //       res.status(200).json(result);
-  //     } catch (error) {
-  //       res.json({ status: '400', message: error });
-  //     }
-  //   }
 }

@@ -23,7 +23,7 @@ app.use(
 
     const collection = database.collection<UserType>(process.env.COLLECTION_NAME!);
     const usersController = new UserController(collection);
-    app.get('/get-user-id/:userID', async (req, res) => await usersController.getUserId(req, res));
+    app.get('/api/users', async (req, res) => await usersController.getUsers(req, res));
   } catch (error) {
     logger('error', error as string);
   }
