@@ -28,6 +28,12 @@ This script will:
 - Install npm dependencies
 - Start Docker containers
 
+3. Run script to generate 100 random users:
+
+   ```bash
+   ts-node src/scripts/generateUsers.ts
+   ```
+
 ## Project Structure
 
 The project consists of several microservices and a frontend application:
